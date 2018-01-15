@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+			body{
+				background: #0d1521;
+			}
+			.head{
+				width: 100%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.head img{
+				width: 70px;
+				height: 36px;
+			}
+			.tian{
+				width: 100%;
+				margin: o auto;
+				background: #090d13;
+			}
+			.tian p{
+				width: 97%;
+				height: 84px;
+				line-height: 84px;
+				color: #989898;
+				font-size: 20px;
+				padding-left: 3%;
+			}
+			.tian div button{
+				height: 84px;
+				width: 20%;
+				text-align: center;
+				line-height: 84px;
+				color: #ffffff;
+				background: #989898;
+				float: right;
+			}
+			.tian .a{
+				float: right;
+				width: 20%;
+				text-align: center;
+				background: #245580;
+			}
+			.jia{
+				width: 100%;
+				margin: 0 auto;
+				height: 84px;
+				line-height: 84px;
+				color: #989898;
+				background: #181c22;
+			}
+			.jia input{
+				width: 73%;
+				height: 84px;
+				margin-left: 3%;
+				float: left;
+			}
+			.jia input:nth-child(2){
+				width: 20%;
+				float: left;
+			}
+		</style>
+</head>
+<body>
+	<div class="head">
+		<img src="<%= data[1].img %>"  alt="">
+	</div>
+	<form action="/create" method="post" class="jia">
+		<input type="text" name="palying" placeholder="Add new item……"><input type="submit">
+	</form>
+	<div id="content" class="tian">
+	    <%for(var i=0;i<data.length;i++){%>
+	        <div id="content" >
+	           <p id="p1"><%=data[i].palying%><button id="del" class="a">删除</button></p>
+	        </div>
+	    <%}%>
+	</div>
+</body>
+</html>
